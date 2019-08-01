@@ -1,6 +1,6 @@
 package coll;
 
-import bo.TestBO;
+import other.TestBO;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
@@ -17,6 +17,14 @@ public class MapTest {
 
         map.putIfAbsent("2",1);
         System.out.println(map);
+
+        map.computeIfPresent("1",(k,v)->{
+            return v+1;
+        });
+
+        map.computeIfAbsent("1",(k)->{
+            return 2;
+        });
 
         map.putIfAbsent("2",2);
         System.out.println(map);

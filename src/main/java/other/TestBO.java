@@ -1,4 +1,4 @@
-package bo;
+package other;
 
 public class TestBO {
 
